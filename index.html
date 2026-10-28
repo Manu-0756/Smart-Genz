@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head <link rel="stylesheet" href="style.css">>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart GenZ | Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html">Smart GenZ</a>
+    <span>Student Expense Manager</span>
+  </header>
+
+  <nav>
+    <a class="active" href="index.html">Home</a>
+    <a href="add-expense.html">Add Expense</a>
+    <a href="history.html">History</a>
+    <a href="report.html">Monthly Report</a>
+    <a href="settings.html">Settings</a>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">YOUR MONEY, YOUR CONTROL</p>
+        <h1>Welcome to Smart GenZ</h1>
+        <p>Manage your daily expenses and monthly budget.</p>
+      </div>
+      <a class="btn" href="add-expense.html">+ Add Expense</a>
+    </section>
+
+    <section class="cards">
+      <article class="card">
+        <p>Monthly Budget</p>
+        <h2 id="budgetTotal">₹0</h2>
+      </article>
+      <article class="card">
+        <p>Total Spent</p>
+        <h2 id="spentTotal">₹0</h2>
+      </article>
+      <article class="card">
+        <p>Remaining Balance</p>
+        <h2 id="remainingTotal">₹0</h2>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="between">
+        <h2>Monthly Budget Progress</h2>
+        <strong id="progressText">0%</strong>
+      </div>
+      <div class="progress">
+        <div id="progressBar"></div>
+      </div>
+      <p id="budgetMessage">Set your budget in Settings to get started.</p>
+    </section>
+
+    <section class="panel">
+      <div class="between">
+        <h2>Recent Expenses</h2>
+        <a href="history.html">View all →</a>
+      </div>
+      <div id="recentList"></div>
+    </section>
+  </main>
+
+  <footer>© Smart GenZ | Student Expense Manager</footer>
+  <script src="app.js"></script>
+</body>
+</html>

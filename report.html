@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monthly Report | Smart GenZ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html">Smart GenZ</a>
+    <span>Student Expense Manager</span>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="add-expense.html">Add Expense</a>
+    <a href="history.html">History</a>
+    <a class="active" href="report.html">Monthly Report</a>
+    <a href="settings.html">Settings</a>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">MONTH-END SUMMARY</p>
+        <h1>Monthly Report</h1>
+        <p>Review your budget and expenses for a selected month.</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <label class="filter">
+        Select Month
+        <input id="reportMonth" type="month">
+      </label>
+
+      <div id="reportContent"></div>
+
+      <div class="actions no-print">
+        <button id="printReport" class="btn" type="button">
+          Save / Print PDF
+        </button>
+        <button id="shareReport" class="btn secondary" type="button">
+          Share on WhatsApp
+        </button>
+      </div>
+
+      <p class="muted">
+        WhatsApp shares a text summary. Save the PDF first and attach it
+        separately in WhatsApp if needed.
+      </p>
+    </section>
+  </main>
+
+  <footer>Smart GenZ</footer>
+  <script src="app.js"></script>
+</body>
+</html>

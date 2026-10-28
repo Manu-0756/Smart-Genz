@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings | Smart GenZ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html">Smart GenZ</a>
+    <span>Student Expense Manager</span>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="add-expense.html">Add Expense</a>
+    <a href="history.html">History</a>
+    <a href="report.html">Monthly Report</a>
+    <a class="active" href="settings.html">Settings</a>
+  </nav>
+
+  <main class="narrow">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">PERSONAL SETTINGS</p>
+        <h1>App Settings</h1>
+        <p>Set your stay type and monthly spending limit.</p>
+      </div>
+    </section>
+
+    <form id="settingsForm" class="panel form-grid">
+      <label>
+        Where do you stay?
+        <select id="stayType">
+          <option>Hostel</option>
+          <option>PG</option>
+          <option>Home</option>
+          <option>Other</option>
+        </select>
+      </label>
+
+      <label>
+        Monthly Budget (₹)
+        <input id="monthlyBudget" type="number" min="0" step="1" placeholder="6000" required>
+      </label>
+
+      <label>
+        Student Name (Optional)
+        <input id="studentName" type="text" placeholder="Enter your name">
+      </label>
+
+      <label>
+        Budget Alert Threshold
+        <select id="alertThreshold">
+          <option value="50">50% used</option>
+          <option value="75" selected>75% used</option>
+          <option value="80">80% used</option>
+          <option value="90">90% used</option>
+        </select>
+      </label>
+
+      <div class="full">
+        <button class="btn" type="submit">Save Settings</button>
+        <p id="settingsMessage"></p>
+      </div>
+    </form>
+
+    <section class="panel">
+      <h2>About your data</h2>
+      <p class="muted">
+        This version stores information in this browser on this device.
+        Cloud backup and background phone notifications are not enabled.
+      </p>
+    </section>
+  </main>
+
+  <footer>Smart GenZ</footer>
+  <script src="app.js"></script>
+</body>
+</html>

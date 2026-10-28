@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense History | Smart GenZ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html">Smart GenZ</a>
+    <span>Student Expense Manager</span>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="add-expense.html">Add Expense</a>
+    <a class="active" href="history.html">History</a>
+    <a href="report.html">Monthly Report</a>
+    <a href="settings.html">Settings</a>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">YOUR RECORDS</p>
+        <h1>Expense History</h1>
+        <p>View and delete your saved expenses.</p>
+      </div>
+      <a class="btn" href="add-expense.html">+ Add Expense</a>
+    </section>
+
+    <section class="panel">
+      <label class="filter">
+        Filter by Month
+        <input id="historyMonth" type="month">
+      </label>
+      <button id="clearFilter" class="btn secondary" type="button">Show All</button>
+      <div id="historyList"></div>
+    </section>
+  </main>
+
+  <footer>Smart GenZ</footer>
+  <script src="app.js"></script>
+</body>
+</html>
