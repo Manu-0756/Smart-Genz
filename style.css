@@ -353,3 +353,395 @@ body {
   background-attachment: fixed;
   min-height: 100vh;
 }
+
+/* ===== Smart GenZ Modern Theme ===== */
+
+:root {
+  --bg-main: #0b1220;
+  --bg-card: #172235;
+  --accent: #34d399;
+  --accent-violet: #a78bfa;
+  --accent-amber: #fbbf24;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-color: rgba(148, 163, 184, 0.18);
+}
+
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+/* Cards */
+.card,
+.stat-card,
+.expense-card,
+.budget-card,
+.summary-card,
+[class*="stat-card"],
+[class*="expense-card"] {
+  background: linear-gradient(
+    145deg,
+    rgba(30, 45, 65, 0.96),
+    rgba(17, 29, 46, 0.96)
+  );
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
+  transition: border-color 0.2s ease,
+              transform 0.2s ease;
+}
+
+.card:hover,
+.stat-card:hover,
+.expense-card:hover,
+.budget-card:hover {
+  border-color: rgba(52, 211, 153, 0.45);
+}
+
+/* Navigation */
+nav,
+.navbar,
+header {
+  border-color: var(--border-color);
+}
+
+nav a,
+.navbar a {
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover,
+.navbar a:hover,
+nav a.active,
+.navbar a.active,
+nav a[aria-current="page"] {
+  background: rgba(52, 211, 153, 0.14);
+  color: var(--accent);
+  border-radius: 12px;
+}
+
+/* Buttons */
+button,
+.btn,
+.add-expense-btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover,
+.btn:hover,
+.add-expense-btn:hover {
+  box-shadow: 0 5px 18px rgba(16, 185, 129, 0.16);
+}
+
+button:active,
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Inputs */
+input,
+select,
+textarea {
+  background-color: #0f1a2a;
+  color: var(--text-main);
+  border: 1px solid #334155;
+  border-radius: 10px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid rgba(52, 211, 153, 0.35);
+  border-color: var(--accent);
+}
+
+/* Budget progress */
+progress,
+.progress-bar,
+.progress-fill {
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, #10b981, #5eead4);
+  box-shadow: 0 0 12px rgba(52, 211, 153, 0.24);
+}
+
+/* Muted labels and dates */
+.muted,
+.date,
+small,
+.subtitle {
+  color: var(--text-muted);
+}
+
+/* Expense categories */
+.category-food {
+  color: #fb923c;
+}
+
+.category-hostel,
+.category-rent {
+  color: #c4b5fd;
+}
+
+.category-transport {
+  color: #60a5fa;
+}
+
+.category-bills {
+  color: #fbbf24;
+}
+
+/* Mobile spacing */
+@media (max-width: 600px) {
+  .card,
+  .stat-card,
+  .expense-card,
+  .budget-card {
+    border-radius: 15px;
+  }
+}
+
+/* Fix invisible content below dashboard */
+body {
+  min-height: 100vh;
+  color: #f8fafc;
+}
+
+main,
+section,
+.container,
+.dashboard,
+.content,
+.page-content {
+  color: #f8fafc;
+}
+
+/* Make headings and normal text visible */
+h1, h2, h3, h4, p, label {
+  color: inherit;
+}
+
+/* Keep cards visible on dark background */
+.card,
+.stat-card,
+.expense-card,
+.budget-card,
+.summary-card {
+  background-color: #172235;
+  color: #f8fafc;
+  border-color: rgba(148, 163, 184, 0.25);
+}
+
+/* Smart GenZ dashboard layout fix */
+main {
+  display: block;
+  width: min(1100px, 92%);
+  margin: 28px auto;
+  min-height: 60vh;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 24px 0;
+}
+
+.panel {
+  display: block;
+  margin: 20px 0;
+  padding: 22px;
+}
+
+.card,
+.panel {
+  color: #f8fafc;
+}
+
+#recentList {
+  min-height: 40px;
+}
+
+@media (max-width: 650px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+/* Fix: Neeche ka white text visible karo */
+main,
+main p,
+main h1,
+main h2,
+main h3,
+main label,
+.panel,
+.panel p,
+.panel h2,
+.panel h3,
+.cards,
+.card {
+    color: #ffffff !important;
+}
+
+.panel,
+.card,
+.cards {
+    background-color: #1e293b !important;
+}
+
+#recentList,
+#budgetMessage,
+#progressText {
+    color: #ffffff !important;
+}
+
+/* Monthly Report - White section fix */
+body {
+    background-color: #0f172a;
+    color: #ffffff;
+}
+
+main,
+main section,
+.panel,
+.report-card,
+.report-section,
+.summary-card {
+    color: #ffffff !important;
+    background-color: #1e293b !important;
+}
+
+main h1,
+main h2,
+main h3,
+main p,
+main label,
+main span,
+main strong,
+main div {
+    color: #ffffff;
+}
+
+/* Input fields ko readable rakho */
+input,
+select,
+textarea {
+    background-color: #334155;
+    color: #ffffff;
+    border: 1px solid #475569;
+}
+
+/* Tables */
+table {
+    background-color: #1e293b;
+    color: #ffffff;
+}
+
+th,
+td {
+    color: #ffffff;
+    border-color: #475569;
+}
+
+/* Smart GenZ - Monthly Report white section fix */
+body:has(#reportContent) main .panel {
+    background: #1e293b !important;
+    color: #ffffff !important;
+    border: 1px solid #334155;
+}
+
+body:has(#reportContent) #reportContent {
+    background: #1e293b !important;
+    color: #ffffff !important;
+}
+
+body:has(#reportContent) #reportContent * {
+    color: #ffffff !important;
+}
+
+body:has(#reportContent) #reportContent > div,
+body:has(#reportContent) #reportContent .card,
+body:has(#reportContent) #reportContent .panel {
+    background-color: #273449 !important;
+    border-color: #475569 !important;
+}
+
+body:has(#reportContent) .filter,
+body:has(#reportContent) .muted {
+    color: #cbd5e1 !important;
+}
+
+body:has(#reportContent) input[type="month"] {
+    background: #334155 !important;
+    color: #ffffff !important;
+    border: 1px solid #64748b !important;
+}
+
+/* Monthly Report - Fix white background */
+#reportContent {
+    background: #1e293b !important;
+    color: #f8fafc !important;
+    padding: 20px !important;
+    border-radius: 14px;
+}
+
+#reportContent h2,
+#reportContent p,
+#reportContent span,
+#reportContent strong {
+    color: #f8fafc !important;
+}
+
+#reportContent .report-summary {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin: 20px 0;
+    background: transparent !important;
+}
+
+#reportContent .report-summary > div {
+    background: #273449 !important;
+    color: #f8fafc !important;
+    padding: 16px;
+    border: 1px solid #475569;
+    border-radius: 12px;
+}
+
+#reportContent .expense-row {
+    background: #273449 !important;
+    color: #f8fafc !important;
+    border: 1px solid #475569;
+    border-radius: 10px;
+    padding: 14px;
+    margin: 10px 0;
+}
+
+#reportContent .expense-row * {
+    color: #f8fafc !important;
+}
+
+@media (max-width: 600px) {
+    #reportContent .report-summary {
+        grid-template-columns: 1fr;
+    }
+}
