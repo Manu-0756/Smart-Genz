@@ -745,3 +745,13 @@ body:has(#reportContent) input[type="month"] {
         grid-template-columns: 1fr;
     }
 }
+.download-btn {
+    display: inline-block;
+    background: #07966f;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 15px;
+}
